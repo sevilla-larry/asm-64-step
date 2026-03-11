@@ -14,6 +14,27 @@ main:
 ; Put your experiments between the two nops...
 
 
+    xor rbx,rbx
+    pushfq
+    pop rbx         ; same as: pop qword rbx
+
+
+;    xor rax,rax
+;    xor rbx,rbx
+;    xor rcx,rcx
+;    xor rdx,rdx
+    
+;    mov ax, 01234h
+;    mov bx, 04ba7h
+;    mov cx, 0ff17h
+;    
+;    push ax
+;    push bx
+;    push cx
+    
+;    pop  dx
+    
+
 ;    xor rdx,rdx
 ;    mov rax, 0
 ;    mov rbx, 17
@@ -56,10 +77,10 @@ main:
 
 
 ;    mov rax, 07FFFFFFFh
-    xor rax, rax
+;    xor rax, rax
 ;    neg rax
 ;    add rax, 07FFFFFFFh
-    add rax, 080000000h
+;    add rax, 080000000h
 
 
 ;    mov rax, 7Fh
