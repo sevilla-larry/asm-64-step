@@ -8,9 +8,10 @@ section .text
 
 main:
     mov rbp, rsp   ; for correct debugging
+;    push rbp
 
 Read:
-    mov rax,0      ; Specify sys_read call
+	mov rax,0      ; Specify sys_read call
 	mov rdi,0      ; Specify File Descriptor 0: Standard Input
 	mov rsi,Buff   ; Pass address of the buffer to read to
 	mov rdx,1      ; Tell sys_read to read one char from stdin
@@ -38,7 +39,12 @@ Write:
         
 Exit:   ret        
 
+;    mov rax,60          ; 60 = exit the program
+;    mov rdi,0           ; Return value in rdi 0 = nothing to return
+;    syscall             ; Call syscall to exit
+
 ;Exit:
-     mov rax,60    ; 60 = exit the program
+;    pop rbp
+;    mov rax,60    ; 60 = exit the program
 ;    mov rdi,0     ; Return value in rdi 0 = nothing to return
 ;    syscall       ; Call syscall to exit
