@@ -38,13 +38,3 @@ Write:
     jmp Read       ; ...then go to the beginning to get another character
         
 Exit:   ret        
-
-;    mov rax,60          ; 60 = exit the program
-;    mov rdi,0           ; Return value in rdi 0 = nothing to return
-;    syscall             ; Call syscall to exit
-
-;Exit:
-;    pop rbp
-;    mov rax,60    ; 60 = exit the program
-;    mov rdi,0     ; Return value in rdi 0 = nothing to return
-;    syscall       ; Call syscall to exit

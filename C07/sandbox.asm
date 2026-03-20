@@ -132,9 +132,8 @@ main:
      nop
      
     pop rbp
-    mov rax,60          ; 60 = exit the program
-    mov rdi,0           ; Return value in rdi 0 = nothing to return
-    syscall             ; Call syscall to exit
 
+    ret
+        
     
 section .bss

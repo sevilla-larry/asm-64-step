@@ -16,6 +16,9 @@ main:
     syscall         ; Make the system call
 
                     ; That done, we exit the program, again with a syscall:
-    mov rax,60      ; 60 = exit
-    mov rdi,0       ; Return value in rdi
-    syscall         ; Call syscall to exit
+;    mov rax,60      ; 60 = exit
+;    mov rdi,0       ; Return value in rdi
+;    syscall         ; Call syscall to exit
+
+    ret
+    
